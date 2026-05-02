@@ -14,8 +14,6 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-            - { label: "العنوان", name: "title", widget: "string" }
-            - { label: "التاريخ", name: "date", widget: "datetime" }
-            - { label: "القسم", name: "category", widget: "select", options: ["سياسة", "رياضة", "محليات", "اقتصاد", "مقالات"] }
-            - { label: "الصورة الرئيسية", name: "thumbnail", widget: "image", required: false }
-            - { label: "نص الخبر", name: "body", widget: "markdown" }
+            - {label: "العنوان", name: "title", widget: "string"}
+            - {label: "التاريخ", name: "date", widget: "datetime"}
+            - {label: "المحتوى", name: "body", widget: "markdown"}
