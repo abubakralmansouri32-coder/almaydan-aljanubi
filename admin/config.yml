@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+collections:
+    - name: "news"
+    label: "الأخبار"
+    folder: "news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+            - {label: "العنوان", name: "title", widget: "string"}
+            - {label: "التاريخ", name: "date", widget: "datetime"}
+            - {label: "القسم", name: "category", widget: "select", options: ["سياسة", "محليات", "رياضة", "اقتصاد", "مقالات"]}
+            - {label: "الصورة الرئيسية", name: "image", widget: "image", required: false}
+            - {label: "نص الخبر", name: "body", widget: "markdown"}
