@@ -6,14 +6,14 @@ media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-    - name: "news"
-    label: "الأخبار"
-    folder: "content/news"
+    - name: "posts"
+    label: "المقالات"
+    folder: "content/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
             - {label: "العنوان", name: "title", widget: "string"}
-            - {label: "التاريخ", name: "date", widget: "datetime"}
-            - {label: "القسم", name: "category", widget: "select", options: ["سياسة", "محليات", "اقتصاد", "رياضة", "مقالات"]}
-            - {label: "صورة الخبر", name: "thumbnail", widget: "image", required: false}
-            - {label: "المحتوى", name: "body", widget: "markdown"}
+            - {label: "تاريخ النشر", name: "date", widget: "datetime"}
+            - {label: "صورة المقال", name: "thumbnail", widget: "image", required: false}
+            - {label: "الوصف المختصر", name: "description", widget: "text", required: false}
+            - {label: "محتوى المقال", name: "body", widget: "markdown"}
