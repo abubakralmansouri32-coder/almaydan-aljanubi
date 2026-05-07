@@ -1,19 +1,21 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: abubakralmansouri32-coder/almaydan-aljanubi
   branch: main
+  auth_type: implicit
+  app_id: Ov23liL7Jtxa8pbPBFvM
 
-media_folder: static/images/uploads
-public_folder: /images/uploads
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-    - name: posts
-    label: المقالات
-    folder: content/posts
+    - name: "news"
+    label: "الأخبار"
+    folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-            - {label: العنوان, name: title, widget: string}
-            - {label: تاريخ النشر, name: date, widget: datetime}
-            - {label: صورة المقال, name: thumbnail, widget: image, required: false}
-            - {label: الوصف المختصر, name: description, widget: text, required: false}
-            - {label: محتوى المقال, name: body, widget: markdown}
+            - {label: "العنوان", name: "title", widget: "string"}
+            - {label: "التاريخ", name: "date", widget: "datetime"}
+            - {label: "الصورة", name: "image", widget: "image", required: false}
+            - {label: "المحتوى", name: "body", widget: "markdown"}
