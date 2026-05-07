@@ -1,8 +1,10 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: "public/images/uploads"
+
+media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
+
 collections:
     - name: "news"
     label: "الأخبار"
@@ -12,5 +14,6 @@ collections:
     fields:
             - {label: "العنوان", name: "title", widget: "string"}
             - {label: "التاريخ", name: "date", widget: "datetime"}
+            - {label: "القسم", name: "category", widget: "select", options: ["سياسة", "محليات", "اقتصاد", "رياضة", "مقالات"]}
             - {label: "صورة الخبر", name: "thumbnail", widget: "image", required: false}
             - {label: "المحتوى", name: "body", widget: "markdown"}
