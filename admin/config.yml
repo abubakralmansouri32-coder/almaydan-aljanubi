@@ -18,4 +18,4 @@ collections:
             - {label: "العنوان", name: "title", widget: "string"}
             - {label: "التاريخ", name: "date", widget: "datetime"}
             - {label: "الصورة", name: "image", widget: "image", required: false}
-            - {label: "المحتوى", name: "body", widget:             - {label: dget: "markdown"}
+            - {label: "المحتوى", name: "body", widget: "markdown"}            
