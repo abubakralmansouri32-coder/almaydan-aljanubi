@@ -1,25 +1,16 @@
 backend:
   name: git-gateway
   branch: main
-  identity_url: https://almaydan-aljanubi.netlify.app/.netlify/identity
-  gateway_url: https://almaydan-aljanubi.netlify.app/.netlify/git/github
-
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
-
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
 collections:
     - name: "news"
-    label: "News"
-    folder: "_posts/news"
+    label: "الأخبار"
+    folder: "content/news"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-            - label: "Title"
-        name: "title"
-        widget: "string"
-            - label: "Date"
-        name: "date"
-        widget: "datetime"
-            - label: "Body"
-        name: "body"
-        widget: "markdown"
+            - {label: "العنوان", name: "title", widget: "string"}
+            - {label: "التاريخ", name: "date", widget: "datetime"}
+            - {label: "صورة الخبر", name: "thumbnail", widget: "image", required: false}
+            - {label: "المحتوى", name: "body", widget: "markdown"}
